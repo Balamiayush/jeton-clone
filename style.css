@@ -1,0 +1,42 @@
+:root {
+    --box-background: rgba(255, 255, 255, 0.13);
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --backdrop-filter: blur(6px);
+    --text-color: white;
+    --font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jeton';
+}
+
+@font-face {
+    font-family: 'Jeton';
+    src: url(./SequelSans-Display.BSxqJqbM.woff2);
+}
+
+.box1 {
+    /* Reuse the variables here */
+    border-radius: 10px;
+    background: var(--box-background);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: var(--font-weight);
+}
+.scroll{
+    background: var(--box-background);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    cursor: pointer;
+    color: var(--text-color);
+    /* font-weight: var(--font-weight); */
+    border-radius: 25px;
+    
+}
