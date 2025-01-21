@@ -18,7 +18,7 @@
     src: url(./SequelSans-Display.BSxqJqbM.woff2);
 }
 video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
