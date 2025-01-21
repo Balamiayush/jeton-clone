@@ -119,8 +119,15 @@ function page3Function() {
     ease: "power3.out",
   })
 }
+function loadingFunction() {
+  gsap.to('.loading1', {
+    top: '-100%',
+    ease: "power3.out",
+    duration: 1,
 
-
+  })
+}
+loadingFunction();
 page2Function();
 page3Function();
 scrollToPage2();
