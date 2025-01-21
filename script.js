@@ -9,6 +9,28 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+// Initialize Lenis
+
+
+// Function to handle scrolling
+function scrollToPage2() {
+  const scrollButton = document.getElementById('scrollButton');
+  scrollButton.addEventListener('click', () => {
+    const targetSection = document.querySelector('.page2');
+    lenis.scrollTo(targetSection); // Use Lenis's scrollTo method
+    console.log('clicked');
+  });
+}
+
+// Ensure Lenis updates on every frame
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// Call the function
+
 
 requestAnimationFrame(raf);
 function page2Function() {
@@ -19,7 +41,7 @@ function page2Function() {
       end: "80%",
       pin: true,
       scrub: true,
-        delay:0.5,
+      delay: 0.5,
       transition: "transform 0.6s cubic-bezier(0.65, 0, 0.35, 1)",
     },
   });
@@ -76,28 +98,29 @@ function page2Function() {
     "a"
   );
 }
-function page3Function(){
+function page3Function() {
   let tl = gsap.timeline({
-    scrollTrigger:{
-      trigger:".page3",
-      start:"top",
-      end:"bottom",
-      pin:true,
-      scrub:1,
+    scrollTrigger: {
+      trigger: ".page3",
+      start: "top",
+      end: "bottom",
+      pin: true,
+      scrub: 1,
     }
   })
-  tl.from('.bo2',{
-    y:'80vw',
-    opacity:0,
-    ease:"power3.out",
+  tl.from('.bo2', {
+    y: '80vw',
+    opacity: 0,
+    ease: "power3.out",
   })
-  tl.from('.bo3',{
-    y:'80vw',
-    opacity:0,
-    ease:"power3.out",
+  tl.from('.bo3', {
+    y: '80vw',
+    opacity: 0,
+    ease: "power3.out",
   })
 }
 
 
 page2Function();
 page3Function();
+scrollToPage2();
