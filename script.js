@@ -128,6 +128,6 @@ function loadingFunction() {
   })
 }
 loadingFunction();
+scrollToPage2();
 page2Function();
 page3Function();
-scrollToPage2();
